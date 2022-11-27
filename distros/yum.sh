@@ -1,16 +1,15 @@
 #!/bin/bash
 
-distro="yum"
-instcommnd="yum install -y "
-updcommnd="yum update && yum upgrade"
-apps="dnf git stow neovim zsh bat"
-
+# Actualizamos sistema
 yum update -y
 yum upgrade -y
-yum install -y dnf git stow neovim zsh bat
-dnf remove zsh -y
-dnf install curl git make ncurses-devel gcc autoconf man -y
+# Paquetería
+yum install -y dnf git stow neovim curl git make ncurses-devel gcc autoconf man
+# Apps sin paquetería
+# Bat
 yum install wget http://repo.openfusion.net/centos7-x86_64/bat-0.7.0-1.of.el7.x86_64.rpm
+# Zsh
+dnf remove zsh -y
 git clone -b zsh-5.8.1 https://github.com/zsh-users/zsh.git /tmp/zsh
 cd /tmp/zsh
 ./Util/preconfig
