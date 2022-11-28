@@ -9,8 +9,9 @@ if [ $retVal -eq 0 ]; then
 export distro="yum"
 # Descargamos y ejecutamos script para equipos yum.
 wget https://github.com/Conkernel/scripts/blob/master/distros/yum.sh
-bash yum.sh
+chmod +x yum.sh && ./yum.sh
 # ...
+echo "Hacemos return"
 return;
 fi
 # Apt
@@ -32,4 +33,8 @@ export distro="pacman"
 return;
 fi
 
-echo "No se ha podido identificar el tipo de distro"
+if $distro="unknown";then
+    echo "No se ha podido identificar el tipo de distro"
+fi
+# fin de script ident.sh
+echo "fin de script ident.sh"
