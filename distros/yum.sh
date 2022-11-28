@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# iniciamos script yum.sh
+echo "iniciamos script yum.sh"
 # Actualizamos sistema
 yum update -y
 yum upgrade -y
