@@ -12,9 +12,11 @@ export distro="yum"
 wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum.sh 
 chmod +x yum.sh && ./yum.sh
 # ...
+########## CORREGIR:
 echo "Hacemos return"
 return;
 fi
+##########
 # Apt
 apt --version > /dev/null 2>&1
 retVal=$?

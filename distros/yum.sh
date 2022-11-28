@@ -2,6 +2,10 @@
 
 # iniciamos script yum.sh
 echo "iniciamos script yum.sh"
+
+
+#Nos posicionamos en el directorio temporal de los scripts
+cd cd /tmp/custom_script
 # Actualizamos sistema
 yum update -y
 yum upgrade -y
