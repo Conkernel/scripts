@@ -8,7 +8,7 @@ retVal=$?
 if [ $retVal -eq 0 ]; then
 export distro="yum"
 # Descargamos y ejecutamos script para equipos yum.
-wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum.sh
+wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum.sh 
 chmod +x yum.sh && ./yum.sh
 # ...
 echo "Hacemos return"
