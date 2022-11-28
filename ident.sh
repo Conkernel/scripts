@@ -1,6 +1,7 @@
 #!/bin/bash
 # Averiguamos qué tipo de distro es (yum,apt,pacman...)
-cd /tmp/
+mkdir /tmp/custom_script -p
+cd /tmp/custom_script
 export distro="unknown"
 # Yum
 yum --version > /dev/null 2>&1
