@@ -5,7 +5,7 @@ echo "iniciamos script yum.sh"
 
 
 #Nos posicionamos en el directorio temporal de los scripts
-cd cd /tmp/custom_script
+cd /tmp/custom_script
 # Actualizamos sistema
 yum update -y
 yum upgrade -y
@@ -26,7 +26,5 @@ rm -rf /tmp/zsh
 #chsh -s $(which zsh)  # modificar ficher /etc/default/useradd para aplicar a todos los usuarios
 
 
-# Descargamos y ejecutamos script para usuarios en yum.
-wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum/user.sh 
-chmod +x user.sh && ./user.sh
+
 

@@ -1,6 +1,5 @@
 #!/bin/bash
 # Averiguamos qué tipo de distro es (yum,apt,pacman...)
-mkdir /tmp/custom_script -p
 cd /tmp/custom_script
 export distro="unknown"
 # Yum
@@ -9,11 +8,14 @@ retVal=$?
 if [ $retVal -eq 0 ]; then
 export distro="yum"
 # Descargamos y ejecutamos script para equipos yum.
-wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum.sh 
-chmod +x yum.sh && ./yum.sh
-# ...
-########## CORREGIR:
-echo "Hacemos return"
+wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum/packages.sh 
+chmod +x packages.sh
+echo "ESCRIBE LA CONTRASEÑA DE ROOT"
+su -c packages.sh
+# Descargamos y ejecutamos script para usuarios en yum.
+wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum/user.sh 
+chmod +x user.sh
+./user.sh
 fi
 ##########
 # Apt
