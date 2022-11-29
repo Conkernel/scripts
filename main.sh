@@ -1,5 +1,6 @@
 #!/bin/bash
 # Averiguamos qué tipo de distro es (yum,apt,pacman...)
+mkdir /tmp/custom_script -p
 cd /tmp/custom_script
 export distro="unknown"
 # Yum
