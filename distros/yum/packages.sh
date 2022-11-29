@@ -13,7 +13,7 @@ yum upgrade -y
 yum install -y dnf git stow neovim curl git make ncurses-devel gcc autoconf man
 # Apps sin paquetería
 # Bat
-yum install wget http://repo.openfusion.net/centos7-x86_64/bat-0.7.0-1.of.el7.x86_64.rpm
+yum install wget http://repo.openfusion.net/centos7-x86_64/bat-0.7.0-1.of.el7.x86_64.rpm -y
 # Zsh
 dnf remove zsh -y
 git clone -b zsh-5.8.1 https://github.com/zsh-users/zsh.git /tmp/zsh
