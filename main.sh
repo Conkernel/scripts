@@ -36,7 +36,7 @@ export distro="pacman"
 # ...
 fi
 # Si la distro no coincide con ninguna de las anteriores:
-if $distro="unknown";then
+if [$distro="unknown"];then
     echo "No se ha podido identificar el tipo de distro"
 fi
 # fin de script ident.sh
