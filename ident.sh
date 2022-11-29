@@ -32,7 +32,7 @@ export distro="pacman"
 # Descargamos y ejecutamos script para equipos pacman.
 # ...
 fi
-
+# Si la distro no coincide con ninguna de las anteriores:
 if $distro="unknown";then
     echo "No se ha podido identificar el tipo de distro"
 fi

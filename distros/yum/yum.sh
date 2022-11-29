@@ -27,6 +27,6 @@ rm -rf /tmp/zsh
 
 
 # Descargamos y ejecutamos script para usuarios en yum.
-wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum.sh 
-chmod +x yum.sh && ./yum.sh
+wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum/user.sh 
+chmod +x user.sh && ./user.sh
 
