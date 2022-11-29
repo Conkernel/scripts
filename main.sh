@@ -14,7 +14,7 @@ chmod +x packages.sh
 echo
 echo "ESCRIBE LA CONTRASEÑA DE ROOT"
 echo
-su -c packages.sh
+su -c /tmp/custom_script/packages.sh
 # Descargamos y ejecutamos script para usuarios en yum.
 wget https://raw.githubusercontent.com/Conkernel/scripts/master/distros/yum/user.sh 
 chmod +x user.sh
